@@ -4,6 +4,7 @@ import de.spigotutils.delta203.spigot.commands.Test;
 import de.spigotutils.delta203.spigot.files.FileManager;
 import de.spigotutils.delta203.spigot.mysql.MySQlManager;
 import org.bukkit.Bukkit;
+import org.bukkit.configuration.Configuration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
@@ -12,7 +13,7 @@ public class SpigotUtils extends JavaPlugin {
 
   public static SpigotUtils plugin;
   public static String prefix = "§f[§eSpigot§6Utils§f] §7";
-  public static FileManager configYml;
+  public static Configuration config;
   public static MySQlManager mysql;
 
   @Override
@@ -20,9 +21,10 @@ public class SpigotUtils extends JavaPlugin {
     plugin = this;
 
     // load config file
-    configYml = new FileManager("config.yml");
+    FileManager configYml = new FileManager("config.yml");
     configYml.create();
     configYml.load();
+    config = configYml.get();
 
     // create mysql connection
     mysql = new MySQlManager("localhost", 3306, "test", "root", "");

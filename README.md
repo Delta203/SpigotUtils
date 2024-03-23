@@ -1,4 +1,4 @@
-# SpigotUtils
+# Spigot Utils
 Useful classes for making a spigot plugin
 
 **Contents:**

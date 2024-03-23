@@ -6,6 +6,14 @@ import org.bukkit.Location;
 
 import java.util.Objects;
 
+/**
+ * <b>Location Builder</b><br>
+ * This is content from Spigot Utils <small>(Useful classes for making a spigot plugin)</small>.
+ *
+ * @see <a href="https://github.com/Delta203/SpigotUtils">Spigot Utils</a>
+ * @author Delta203
+ * @version 1.0
+ */
 public class LocationBuilder {
 
   private Location location;
