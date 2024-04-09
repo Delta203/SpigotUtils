@@ -1,7 +1,7 @@
 # Spigot Utils
 Useful classes for making a spigot plugin
 
-**Contents:**
+## Contents:
 - File manager (*Register a FileManager to handle a configuration file.*)
 - MySQl manager (*Register a MySQlManager to create a MySQl connection and operate with a MySQl database.*)
 - Item builder (*Register an ItemBuilder to modify ItemStacks.*)
