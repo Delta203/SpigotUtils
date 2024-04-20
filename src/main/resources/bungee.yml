@@ -1,0 +1,5 @@
+name: SpigotUtils
+version: 1.1
+author: Delta203
+
+main: de.spigotutils.delta203.bungee.SpigotUtilsBungee

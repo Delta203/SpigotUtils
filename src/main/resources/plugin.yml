@@ -1,9 +1,9 @@
 name: SpigotUtils
-version: 1.0
+version: 1.1
 api-version: 1.20
 author: Delta203
 
-main: de.spigotutils.delta203.spigot.SpigotUtils
+main: de.spigotutils.delta203.spigot.SpigotUtilsSpigot
 
 commands:
   test:

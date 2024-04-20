@@ -1,7 +1,4 @@
-package de.spigotutils.delta203.spigot.mysql;
-
-import de.spigotutils.delta203.spigot.SpigotUtils;
-import org.bukkit.Bukkit;
+package de.spigotutils.delta203.core.mysql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,7 +10,7 @@ import java.sql.SQLException;
  *
  * @see <a href="https://github.com/Delta203/SpigotUtils">Spigot Utils</a>
  * @author Delta203
- * @version 1.0
+ * @version 1.1
  */
 public class MySQlManager {
 
@@ -61,7 +58,6 @@ public class MySQlManager {
               "jdbc:mysql://" + host + ":" + port + "/" + database + "?autoReconnect=true",
               name,
               password);
-      Bukkit.getConsoleSender().sendMessage(SpigotUtils.prefix + "§aMySQl successfully connected.");
     } catch (SQLException e) {
       e.printStackTrace();
     }
@@ -72,8 +68,6 @@ public class MySQlManager {
     if (!isConnected()) return;
     try {
       connection.close();
-      Bukkit.getConsoleSender()
-          .sendMessage(SpigotUtils.prefix + "§cMySQl successfully disconnected.");
     } catch (SQLException e) {
       e.printStackTrace();
     }
@@ -86,8 +80,6 @@ public class MySQlManager {
           .prepareStatement(
               "CREATE TABLE IF NOT EXISTS SpigotUtils (foo VARCHAR(100), bar INT(16))")
           .executeUpdate();
-      Bukkit.getConsoleSender()
-          .sendMessage(SpigotUtils.prefix + "§aMySQl tables successfully registered.");
     } catch (SQLException e) {
       e.printStackTrace();
     }

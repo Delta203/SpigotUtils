@@ -1,10 +1,9 @@
 package de.spigotutils.delta203.spigot.utils;
 
-import de.spigotutils.delta203.spigot.SpigotUtils;
+import de.spigotutils.delta203.spigot.SpigotUtilsSpigot;
+import java.util.Objects;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
-
-import java.util.Objects;
 
 /**
  * <b>Location Builder</b><br>
@@ -12,7 +11,7 @@ import java.util.Objects;
  *
  * @see <a href="https://github.com/Delta203/SpigotUtils">Spigot Utils</a>
  * @author Delta203
- * @version 1.0
+ * @version 1.1
  */
 public class LocationBuilder {
 
@@ -42,15 +41,15 @@ public class LocationBuilder {
 
   /** Creates a location entry in the plugins configuration file. */
   public void create() {
-    SpigotUtils.plugin
+    SpigotUtilsSpigot.plugin
         .getConfig()
         .set("Locations." + name + ".world", Objects.requireNonNull(location.getWorld()).getName());
-    SpigotUtils.plugin.getConfig().set("Locations." + name + ".x", location.getX());
-    SpigotUtils.plugin.getConfig().set("Locations." + name + ".y", location.getY());
-    SpigotUtils.plugin.getConfig().set("Locations." + name + ".z", location.getZ());
-    SpigotUtils.plugin.getConfig().set("Locations." + name + ".yaw", location.getYaw());
-    SpigotUtils.plugin.getConfig().set("Locations." + name + ".pitch", location.getPitch());
-    SpigotUtils.plugin.saveConfig();
+    SpigotUtilsSpigot.plugin.getConfig().set("Locations." + name + ".x", location.getX());
+    SpigotUtilsSpigot.plugin.getConfig().set("Locations." + name + ".y", location.getY());
+    SpigotUtilsSpigot.plugin.getConfig().set("Locations." + name + ".z", location.getZ());
+    SpigotUtilsSpigot.plugin.getConfig().set("Locations." + name + ".yaw", location.getYaw());
+    SpigotUtilsSpigot.plugin.getConfig().set("Locations." + name + ".pitch", location.getPitch());
+    SpigotUtilsSpigot.plugin.saveConfig();
   }
 
   /**
@@ -62,11 +61,11 @@ public class LocationBuilder {
     return new Location(
         Bukkit.getWorld(
             Objects.requireNonNull(
-                SpigotUtils.plugin.getConfig().getString("Locations." + name + ".world"))),
-        SpigotUtils.plugin.getConfig().getDouble("Locations." + name + ".x"),
-        SpigotUtils.plugin.getConfig().getDouble("Locations." + name + ".y"),
-        SpigotUtils.plugin.getConfig().getDouble("Locations." + name + ".z"),
-        (float) SpigotUtils.plugin.getConfig().getDouble("Locations." + name + ".yaw"),
-        (float) SpigotUtils.plugin.getConfig().getDouble("Locations." + name + ".pitch"));
+                SpigotUtilsSpigot.plugin.getConfig().getString("Locations." + name + ".world"))),
+        SpigotUtilsSpigot.plugin.getConfig().getDouble("Locations." + name + ".x"),
+        SpigotUtilsSpigot.plugin.getConfig().getDouble("Locations." + name + ".y"),
+        SpigotUtilsSpigot.plugin.getConfig().getDouble("Locations." + name + ".z"),
+        (float) SpigotUtilsSpigot.plugin.getConfig().getDouble("Locations." + name + ".yaw"),
+        (float) SpigotUtilsSpigot.plugin.getConfig().getDouble("Locations." + name + ".pitch"));
   }
 }

@@ -1,14 +1,13 @@
 package de.spigotutils.delta203.spigot.utils;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
 import org.bukkit.Color;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.inventory.meta.SkullMeta;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Objects;
 
 /**
  * <b>Item Builder</b><br>
@@ -16,7 +15,7 @@ import java.util.Objects;
  *
  * @see <a href="https://github.com/Delta203/SpigotUtils">Spigot Utils</a>
  * @author Delta203
- * @version 1.0
+ * @version 1.1
  */
 public class ItemBuilder {
 

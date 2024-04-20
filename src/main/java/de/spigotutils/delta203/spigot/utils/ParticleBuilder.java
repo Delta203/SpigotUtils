@@ -1,10 +1,9 @@
 package de.spigotutils.delta203.spigot.utils;
 
+import java.util.Objects;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.entity.Player;
-
-import java.util.Objects;
 
 /**
  * <b>Particle Builder</b><br>
@@ -12,7 +11,7 @@ import java.util.Objects;
  *
  * @see <a href="https://github.com/Delta203/SpigotUtils">Spigot Utils</a>
  * @author Delta203
- * @version 1.0
+ * @version 1.1
  */
 public class ParticleBuilder {
 
