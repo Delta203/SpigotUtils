@@ -4,7 +4,7 @@ import de.spigotutils.delta203.core.ServerType;
 import de.spigotutils.delta203.core.SpigotUtils;
 import de.spigotutils.delta203.core.mysql.MySQlManager;
 import de.spigotutils.delta203.spigot.commands.TestCommand;
-import de.spigotutils.delta203.spigot.customitem.RubySword;
+import de.spigotutils.delta203.spigot.utils.customitem.RubySword;
 import de.spigotutils.delta203.spigot.files.FileManager;
 import java.util.ArrayList;
 import java.util.HashMap;

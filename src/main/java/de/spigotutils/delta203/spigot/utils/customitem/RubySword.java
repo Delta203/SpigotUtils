@@ -1,4 +1,4 @@
-package de.spigotutils.delta203.spigot.customitem;
+package de.spigotutils.delta203.spigot.utils.customitem;
 
 import de.spigotutils.delta203.spigot.SpigotUtilsSpigot;
 import de.spigotutils.delta203.spigot.utils.ItemBuilder;
@@ -26,7 +26,7 @@ public class RubySword {
   public RubySword() {
     // initialise item
     item =
-        new ItemBuilder(new ItemStack(Material.NETHERITE_SWORD), "§cRuby Sword", "§9Custom Item")
+        new ItemBuilder(new ItemStack(Material.NETHERITE_SWORD), "§cRuby Sword", "§9Custom-Item")
             .getItem();
     modelData = 1234;
   }
