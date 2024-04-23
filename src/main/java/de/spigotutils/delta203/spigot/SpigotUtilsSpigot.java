@@ -4,6 +4,7 @@ import de.spigotutils.delta203.core.ServerType;
 import de.spigotutils.delta203.core.SpigotUtils;
 import de.spigotutils.delta203.core.mysql.MySQlManager;
 import de.spigotutils.delta203.spigot.commands.TestCommand;
+import de.spigotutils.delta203.spigot.customitem.RubySword;
 import de.spigotutils.delta203.spigot.files.FileManager;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -50,6 +51,9 @@ public class SpigotUtilsSpigot extends JavaPlugin {
 
     // register commands and listeners
     Objects.requireNonNull(getCommand("test")).setExecutor(new TestCommand());
+
+    // register custom items
+    new RubySword().register();
 
     Bukkit.getConsoleSender()
         .sendMessage(
