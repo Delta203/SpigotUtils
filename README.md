@@ -43,6 +43,12 @@ new LocationBuilder(p.getLocation(), "test").create();
 new LocationBuilder("test").getLocation();
 ```
 
+### Map Builder
+Register a `MapBuilder` to create custom map images:
+```java
+new MapBuilder(p.getWorld(), url).getMapItem();
+```
+
 ### Particle Builder:
 Register a `ParticleBuilder` to spawn particles in a more controlled way:
 ```java
